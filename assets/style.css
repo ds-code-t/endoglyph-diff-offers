@@ -1,0 +1,392 @@
+/* EndoGlyph Diff Lab — customer offer pages
+   Proprietary-watch framing. Clean. No marketing theater. */
+
+:root {
+  --ink: #0f1419;
+  --ink-muted: #4a5568;
+  --ink-faint: #718096;
+  --paper: #f7f5f0;
+  --card: #ffffff;
+  --line: #e2ddd4;
+  --accent: #1a4d3e;
+  --accent-hover: #143d32;
+  --accent-soft: #e8f0ed;
+  --warn: #8b4513;
+  --warn-soft: #f5ebe3;
+  --door-a: #1a4d3e;
+  --door-b: #2c3e6b;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(15, 20, 25, 0.06);
+  --font: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
+  --max: 720px;
+  --max-wide: 960px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* —— Shell —— */
+.site-header {
+  background: var(--ink);
+  color: #f0ebe3;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 3px solid var(--accent);
+}
+
+.site-header-inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: #f0ebe3;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #fff;
+}
+
+.brand span {
+  font-weight: 400;
+  opacity: 0.7;
+  margin-left: 0.35rem;
+}
+
+.header-meta {
+  font-size: 0.75rem;
+  opacity: 0.65;
+  font-family: var(--mono);
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 2rem 1.25rem;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.site-footer-inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
+}
+
+.site-footer a {
+  color: var(--ink-muted);
+}
+
+/* —— Layout —— */
+main {
+  flex: 1;
+  padding: 2.5rem 1.25rem 3.5rem;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.wrap-wide {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+}
+
+/* —— Type —— */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: 1.85rem;
+  font-weight: 650;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 650;
+  margin: 2.25rem 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  font-size: 1.08rem;
+  color: var(--ink-muted);
+  margin: 0 0 1.75rem;
+  max-width: 38em;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+/* —— Cards / doors —— */
+.door-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 700px) {
+  .door-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.door-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem 1.35rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.door-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgba(15, 20, 25, 0.08);
+  color: inherit;
+}
+
+.door-card .door-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.door-card[data-door="a"] .door-label {
+  color: var(--door-a);
+}
+
+.door-card[data-door="b"] .door-label {
+  color: var(--door-b);
+}
+
+.door-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.door-card p {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.door-card .cta-hint {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0;
+}
+
+/* —— Offer sections —— */
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.4rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow);
+}
+
+.panel h2:first-child {
+  margin-top: 0;
+}
+
+.panel.not-this {
+  background: var(--warn-soft);
+  border-color: #d4c4b0;
+}
+
+.panel.not-this h2 {
+  color: var(--warn);
+}
+
+.meter {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 520px) {
+  .meter {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.meter-item {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+
+.meter-item .label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.25rem;
+}
+
+.meter-item .value {
+  font-weight: 650;
+  font-size: 1.05rem;
+}
+
+.meter-item .note {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+
+/* —— CTA —— */
+.cta-block {
+  margin: 2.5rem 0 1rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--ink);
+  color: #f0ebe3;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.cta-block h2 {
+  margin: 0 0 0.4rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.cta-block p {
+  margin: 0 0 1.25rem;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.btn-subscribe {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  font-weight: 650;
+  font-size: 1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  text-decoration: none !important;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-subscribe:hover {
+  background: #226b55;
+  color: #fff !important;
+}
+
+.cta-note {
+  margin-top: 0.85rem;
+  font-size: 0.75rem;
+  opacity: 0.55;
+  font-family: var(--mono);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.why-pay {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.hub-intro {
+  margin-bottom: 0.5rem;
+}
+
+.legal-tiny {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin-top: 2rem;
+  line-height: 1.45;
+}

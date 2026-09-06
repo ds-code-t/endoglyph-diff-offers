@@ -65,3 +65,10 @@ Custom setup ($3k–5k) is invoice / separate Payment Link — not on these seat
 ## After a paid seat
 
 See **`FULFILLMENT.md`**.
+
+## Live Payment Links (test mode — 2026-09-06)
+
+- Door A Nogales: https://buy.stripe.com/test_cNi4gz8pP0QgbI20bj8N200
+- Door B Pistachio: https://buy.stripe.com/test_fZu00j21rdD227sf6d8N201
+
+These are Stripe **test** links (EndoGlyph LLC sandbox). Replace with live-mode Payment Links after account activation / bank link for real charges.

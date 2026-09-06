@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0b1220"/>
+  <rect x="48" y="48" width="416" height="416" fill="none" stroke="#5b8cff" stroke-width="8"/>
+  <rect x="96" y="200" width="320" height="80" fill="#5b8cff"/>
+  <text x="256" y="255" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#0b1220">EG</text>
+  <text x="256" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#e8eefc">EndoGlyph</text>
+  <text x="256" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#9db0d0">Diff Lab</text>
+</svg>

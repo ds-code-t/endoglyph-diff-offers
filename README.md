@@ -68,7 +68,7 @@ See **`FULFILLMENT.md`**.
 
 ## Live Payment Links (test mode — 2026-09-06)
 
-- Door A Nogales: https://buy.stripe.com/test_cNi4gz8pP0QgbI20bj8N200
-- Door B Pistachio: https://buy.stripe.com/test_fZu00j21rdD227sf6d8N201
+- Door A Nogales: https://buy.stripe.com/14A4gBa6E7aa6pMcbU5Rm00
+- Door B Pistachio: https://buy.stripe.com/eVq28tgv2cuu3dA6RA5Rm01
 
-These are Stripe **test** links (EndoGlyph LLC sandbox). Replace with live-mode Payment Links after account activation / bank link for real charges.
+These are Stripe **live** links (EndoGlyph LLC sandbox). Replace with live-mode Payment Links after account activation / bank link for real charges.

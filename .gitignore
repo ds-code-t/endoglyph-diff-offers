@@ -1,0 +1,6 @@
+METRICS.md
+FULFILLMENT.md
+fulfill_paid_digest.py
+**/goatcounter-credentials.txt
+.env
+*.pem
